@@ -1,5 +1,7 @@
 # Home Assistant integration (MQTT discovery)
 homeassistant: false
+frontend:
+  port: 9442
 
 # allow new devices to join
 permit_join: true
