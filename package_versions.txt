@@ -31,8 +31,8 @@ mosquitto-clients-2.0.14-r0
 mosquitto-libs-2.0.14-r0
 musl-1.2.3-r1
 musl-utils-1.2.3-r1
-ncurses-libs-6.3_p20220625-r0
-ncurses-terminfo-base-6.3_p20220625-r0
+ncurses-libs-6.3_p20220709-r0
+ncurses-terminfo-base-6.3_p20220709-r0
 nghttp2-libs-1.48.0-r0
 nodejs-current-18.4.0-r0
 procps-3.3.17-r1
