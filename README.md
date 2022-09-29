@@ -1,5 +1,8 @@
 ## docker-zigbee2mqtt (+mosquitto)
 
+**moved to https://hub.docker.com/u/hydaz**
+
+
 [![docker hub](https://img.shields.io/badge/docker_hub-link-blue?style=for-the-badge&logo=docker)](https://hub.docker.com/r/vcxpz/zigbee2mqtt) ![docker image size](https://img.shields.io/docker/image-size/vcxpz/zigbee2mqtt?style=for-the-badge&logo=docker) [![auto build](https://img.shields.io/badge/docker_builds-automated-blue?style=for-the-badge&logo=docker?color=d1aa67)](https://github.com/hydazz/docker-zigbee2mqtt/actions?query=workflow%3A"Auto+Builder+CI")
 
 **This is an unofficial image that has been modified for my own needs. If my needs match your needs, feel free to use this image at your own risk.**
