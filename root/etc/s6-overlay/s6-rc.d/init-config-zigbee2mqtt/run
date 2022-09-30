@@ -1,10 +1,7 @@
 #!/usr/bin/with-contenv bash
 
 mkdir -p \
-	/config/{mosquitto,zigbee2mqtt}
-
-[[ ! -f /config/mosquitto/mosquitto.conf ]] &&
-	cp /defaults/mosquitto.conf /config/mosquitto/mosquitto.conf
+	/config/zigbee2mqtt
 
 if [ ! -f /config/zigbee2mqtt/configuration.yaml ]; then
 	cp /defaults/zigbee2mqtt.yaml /config/zigbee2mqtt/configuration.yaml
@@ -14,4 +11,4 @@ fi
 
 # permissions
 chown -R abc:abc \
-	/config
+	/config/zigbee2mqtt
