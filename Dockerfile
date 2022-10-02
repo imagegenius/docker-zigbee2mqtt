@@ -7,7 +7,7 @@ LABEL build_version="Zigbee2MQTT version:- ${VERSION} Build-date:- ${BUILD_DATE}
 LABEL maintainer="hydaz"
 
 # environment settings
-ENV ZIGBEE2MQTT_DATA="/config/zigbee2mqtt"
+ENV ZIGBEE2MQTT_DATA="/config/"
 
 RUN set -xe && \
 	echo "**** install build packages ****" && \
@@ -22,8 +22,6 @@ RUN set -xe && \
 		python3 && \
 	echo "**** install packages ****" && \
 	apk add -U --upgrade --no-cache \
-		mosquitto \
-		mosquitto-clients \
 		nodejs && \
 	echo "**** install zigbee2mqtt ****" && \
 	mkdir -p \

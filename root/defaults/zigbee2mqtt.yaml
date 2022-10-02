@@ -11,12 +11,12 @@ mqtt:
   # MQTT base topic for zigbee2mqtt MQTT messages
   base_topic: zigbee2mqtt
   # MQTT server URL
-  server: "mqtt://localhost:1883"
+  server: "mqtt://<mqtt_broker>:1883"
   # MQTT server authentication, uncomment if required:
   # user: my_user
   # password: my_password
 
 # Serial settings
 serial:
-  # Location of CC2531 USB sniffer
+  # Location of zigbee USB
   port: /dev/ttyACM0

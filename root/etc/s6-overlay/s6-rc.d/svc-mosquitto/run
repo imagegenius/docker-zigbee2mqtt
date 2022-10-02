@@ -1,6 +1,0 @@
-#!/usr/bin/with-contenv bash
-
-echo "Starting Mosquitto."
-exec s6-setuidgid abc \
-	mosquitto \
-	-c /config/mosquitto/mosquitto.conf

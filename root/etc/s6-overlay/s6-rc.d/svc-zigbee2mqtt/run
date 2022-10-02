@@ -2,6 +2,5 @@
 
 cd /app/zigbee2mqtt || exit 1
 
-echo "Starting Zigbee2MQTT."
 exec s6-setuidgid abc \
 	node index.js

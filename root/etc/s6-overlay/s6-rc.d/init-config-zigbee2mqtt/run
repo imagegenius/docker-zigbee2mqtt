@@ -1,14 +1,11 @@
 #!/usr/bin/with-contenv bash
 
-mkdir -p \
-	/config/zigbee2mqtt
-
-if [ ! -f /config/zigbee2mqtt/configuration.yaml ]; then
-	cp /defaults/zigbee2mqtt.yaml /config/zigbee2mqtt/configuration.yaml
-	echo "Please modify the zigbee2mqtt configuration.yaml file to your needs and restart the container"
+if [ ! -f /config/configuration.yaml ]; then
+	cp /defaults/zigbee2mqtt.yaml /config/configuration.yaml
+	echo "Please modify /config/configuration.yaml to your needs and restart the container"
 	sleep infinity
 fi
 
 # permissions
 chown -R abc:abc \
-	/config/zigbee2mqtt
+	/config/
