@@ -59,5 +59,5 @@ RUN set -xe && \
 COPY root/ /
 
 # ports and volumes
-EXPOSE 9442 1883
+EXPOSE 9442
 VOLUME /config
