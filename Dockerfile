@@ -3,7 +3,8 @@ FROM hydaz/baseimage-alpine:latest
 # set version label
 ARG BUILD_DATE
 ARG VERSION
-LABEL build_version="Zigbee2MQTT version:- ${VERSION} Build-date:- ${BUILD_DATE}"
+ARG ZIGBEE2MQTT_VERSION
+LABEL build_version="Version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 LABEL maintainer="hydaz"
 
 # environment settings
@@ -27,13 +28,13 @@ RUN set -xe && \
 	mkdir -p \
 		/app/zigbee2mqtt \
 		/tmp/zigbee2mqtt && \
-	if [ -z ${VERSION+x} ]; then \
-		VERSION=$(curl -sL "https://api.github.com/repos/koenkk/zigbee2mqtt/releases/latest" | \
+	if [ -z ${ZIGBEE2MQTT_VERSION+x} ]; then \
+		ZIGBEE2MQTT_VERSION=$(curl -sL "https://api.github.com/repos/koenkk/zigbee2mqtt/releases/latest" | \
 			jq -r '.tag_name'); \
 	fi && \
 	curl -o \
 		/tmp/zigbee2mqtt.tar.gz -L \
-		"https://github.com/koenkk/zigbee2mqtt/archive/${VERSION}.tar.gz" && \
+		"https://github.com/koenkk/zigbee2mqtt/archive/${ZIGBEE2MQTT_VERSION}.tar.gz" && \
 	tar xf \
 		/tmp/zigbee2mqtt.tar.gz -C \
 		/tmp/zigbee2mqtt --strip-components=1 && \

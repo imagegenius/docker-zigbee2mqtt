@@ -1,0 +1,28 @@
+---
+
+# jenkins variables
+project_name: docker-zigbee2mqtt
+external_type: custom_json
+release_type: stable
+release_tag: latest
+branch: main
+repo_vars:
+  - JSON_URL = 'https://api.github.com/repos/koenkk/zigbee2mqtt/releases/latest'
+  - JSON_PATH = '.tag_name'
+  - BUILD_VERSION_ARG = 'ZIGBEE2MQTT_VERSION'
+  - USER = 'hydazz'
+  - REPO = 'docker-zigbee2mqtt'
+  - CONTAINER_NAME = 'zigbee2mqtt'
+  - DOCKERHUB_IMAGE = 'hydaz/zigbee2mqtt'
+  - DEV_DOCKERHUB_IMAGE = 'dev/zigbee2mqtt'
+  - PR_DOCKERHUB_IMAGE = 'pipepr/zigbee2mqtt'
+  - DIST_IMAGE = 'alpine'
+  - MULTIARCH = 'false'
+  - CI = 'false'
+  - CI_WEB = 'false'
+  - CI_PORT = '9442'
+  - CI_SSL = 'false'
+  - CI_DELAY = '120'
+  - CI_DOCKERENV = 'TZ=Europe/London'
+  - CI_AUTH = ''
+  - CI_WEBPATH = ''
