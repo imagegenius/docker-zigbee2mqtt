@@ -10,7 +10,7 @@ LABEL maintainer="hydaz"
 # environment settings
 ENV ZIGBEE2MQTT_DATA="/config/"
 
-RUN set -xe && \
+RUN  \
 	echo "**** install build packages ****" && \
 	apk add --no-cache --virtual=build-dependencies \
 		g++ \
