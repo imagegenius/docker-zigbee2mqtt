@@ -29,6 +29,12 @@ param_device_map: true
 param_devices:
   - { device_path: "/dev/ttyUSB0", device_host_path: "/dev/ttyUSB0", desc: "Path the the Zigbee USB, usually /dev/ttyUSB0 or /dev/ttyACM0" }
 
+# application setup block
+app_setup_block_enabled: true
+app_setup_block: |
+  The default configuration should be enough to get started but you may need to change the USB device in /config/configuration.yaml
+
+
 # changelog
 changelogs:
   - { date: "1.02.23:", desc: "Initial Release." }
