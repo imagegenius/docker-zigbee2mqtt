@@ -25,6 +25,9 @@ The architectures supported by this image are:
 | arm64 | ❌ | |
 | armhf| ❌ | |
 
+## Application Setup
+
+The default configuration should be enough to get started but you may need to change the USB device in /config/configuration.yaml
 
 ## Usage
 
