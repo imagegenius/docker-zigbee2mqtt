@@ -25,7 +25,7 @@ pipeline {
     PR_DOCKERHUB_IMAGE = 'pipepr/zigbee2mqtt'
     DIST_IMAGE = 'alpine'
     MULTIARCH = 'false'
-    CI = 'false'
+    CI = 'true'
     CI_WEB = 'true'
     CI_PORT = '9442'
     CI_SSL = 'false'
@@ -208,7 +208,35 @@ pipeline {
         }
       }
     }
-    // Run ShellCheck below
+    // Run ShellCheck
+    stage('ShellCheck') {
+      when {
+        environment name: 'CI', value: 'true'
+      }
+      steps {
+        withCredentials([
+          string(credentialsId: 'ci-tests-s3-key-id', variable: 'S3_KEY'),
+          string(credentialsId: 'ci-tests-s3-secret-access-key', variable: 'S3_SECRET')
+        ]) {
+          script{
+            env.SHELLCHECK_URL = 'https://ci-tests.hyde.services/' + env.IMAGE + '/' + env.META_TAG + '/shellcheck-result.xml'
+          }
+          sh '''curl -sL https://raw.githubusercontent.com/linuxserver/docker-shellcheck/master/checkrun.sh | /bin/bash'''
+          sh '''#! /bin/bash
+                set -e
+                docker pull ghcr.io/hydazz/dev-spaces-file-upload:latest
+                docker run --rm \
+                -e DESTINATION=\"${IMAGE}/${META_TAG}/shellcheck-result.xml\" \
+                -e FILE_NAME="shellcheck-result.xml" \
+                -e MIMETYPE="text/xml" \
+                -v ${WORKSPACE}:/mnt \
+                -e SECRET_KEY=\"${S3_SECRET}\" \
+                -e ACCESS_KEY=\"${S3_KEY}\" \
+                -t ghcr.io/hydazz/dev-spaces-file-upload:latest \
+                python /upload.py'''
+        }
+      }
+    }
     // Use helper containers to render templated files
     stage('Update-Templates') {
       when {
