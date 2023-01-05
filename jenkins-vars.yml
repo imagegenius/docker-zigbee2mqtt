@@ -5,17 +5,17 @@ project_name: docker-zigbee2mqtt
 external_type: custom_json
 release_type: stable
 release_tag: latest
-branch: main
+ig_branch: main
 repo_vars:
   - JSON_URL = 'https://api.github.com/repos/koenkk/zigbee2mqtt/releases/latest'
   - JSON_PATH = '.tag_name'
   - BUILD_VERSION_ARG = 'ZIGBEE2MQTT_VERSION'
-  - USER = 'hydazz'
-  - REPO = 'docker-zigbee2mqtt'
+  - IG_USER = 'imagegenius'
+  - IG_REPO = 'docker-zigbee2mqtt'
   - CONTAINER_NAME = 'zigbee2mqtt'
-  - DOCKERHUB_IMAGE = 'hydaz/zigbee2mqtt'
-  - DEV_DOCKERHUB_IMAGE = 'dev/zigbee2mqtt'
-  - PR_DOCKERHUB_IMAGE = 'pipepr/zigbee2mqtt'
+  - DOCKERHUB_IMAGE = 'imagegenius/zigbee2mqtt'
+  - DEV_DOCKERHUB_IMAGE = 'igdev/zigbee2mqtt'
+  - PR_DOCKERHUB_IMAGE = 'igpipepr/zigbee2mqtt'
   - DIST_IMAGE = 'alpine'
   - MULTIARCH = 'false'
   - CI = 'true'
