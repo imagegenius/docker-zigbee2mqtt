@@ -25,7 +25,7 @@ pipeline {
     PR_DOCKERHUB_IMAGE = 'igpipepr/zigbee2mqtt'
     DIST_IMAGE = 'alpine'
     MULTIARCH = 'false'
-    CI = 'true'
+    CI = 'false'
     CI_WEB = 'true'
     CI_PORT = '9442'
     CI_SSL = 'false'
