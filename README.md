@@ -51,7 +51,7 @@ services:
     ports:
       - 9442:9442
     devices:
-      - /dev/ttyUSB0:/dev/ttyUSB0
+      - /dev/ttyUSB0:Zigbee USB
     restart: unless-stopped
 ```
 
@@ -65,7 +65,7 @@ docker run -d \
   -e TZ=Europe/London \
   -p 9442:9442 \
   -v <path to data>:/config \
-  --device /dev/ttyUSB0:/dev/ttyUSB0 \
+  --device /dev/ttyUSB0:Zigbee USB \
   --restart unless-stopped \
   ghcr.io/imagegenius/zigbee2mqtt:latest
 ```
@@ -81,7 +81,7 @@ Container images are configured using parameters passed at runtime (such as thos
 | `-e PGID=1000` | for GroupID - see below for explanation |
 | `-e TZ=Europe/London` | Specify a timezone to use, eg. Europe/London |
 | `-v /config` | Appdata Path |
-| `--device /dev/ttyUSB0` | Path the the Zigbee USB, usually /dev/ttyUSB0 or /dev/ttyACM0 |
+| `--device Zigbee USB` | Path the the Zigbee USB, usually /dev/ttyUSB0 or /dev/ttyACM0 |
 
 ## Environment variables from files (Docker secrets)
 
