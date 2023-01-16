@@ -288,7 +288,7 @@ pipeline {
                 git checkout -f main
                 cd ${TEMPDIR}/docker-${CONTAINER_NAME}
                 mkdir -p ${TEMPDIR}/repo/${IG_REPO}/.github/workflows
-				mkdir -p ${TEMPDIR}/repo/${IG_REPO}/.github/ISSUE_TEMPLATE
+                mkdir -p ${TEMPDIR}/repo/${IG_REPO}/.github/ISSUE_TEMPLATE
                 cp --parents ${TEMPLATED_FILES} ${TEMPDIR}/repo/${IG_REPO}/ || :
                 cd ${TEMPDIR}/repo/${IG_REPO}/
                 if ! grep -q '.jenkins-external' .gitignore 2>/dev/null; then
@@ -350,7 +350,7 @@ pipeline {
     /* ###############
        Build Container
        ############### */
-    // Build Docker container for push to LS Repo
+    // Build Docker container for push to IG Repo
     stage('Build-Single') {
       when {
         expression {
@@ -374,9 +374,16 @@ pipeline {
           --label \"org.opencontainers.image.description=[Zigbee2MQTT](https://www.zigbee2mqtt.io/) - Allows you to use your Zigbee devices without the vendor's bridge or gateway.  \" \
           --no-cache --pull -t ${IMAGE}:${META_TAG} \
           --build-arg ${BUILD_VERSION_ARG}=${EXT_RELEASE} --build-arg VERSION=\"${VERSION_TAG}\" --build-arg BUILD_DATE=${GITHUB_DATE} ."
+        sh "docker tag ${IMAGE}:${META_TAG} ghcr.io/imagegenius/igdev-buildcache:${COMMIT_SHA}-${BUILD_NUMBER}"
+        retry(5) {
+          sh "docker push ghcr.io/imagegenius/igdev-buildcache:${COMMIT_SHA}-${BUILD_NUMBER}"
+        }
+        sh '''docker rmi \
+              ghcr.io/imagegenius/igdev-buildcache:${COMMIT_SHA}-${BUILD_NUMBER} || :
+           '''
       }
     }
-    // Build MultiArch Docker containers for push to LS Repo
+    // Build MultiArch Docker containers for push to IG Repo
     stage('Build-Multi') {
       when {
         allOf {
@@ -403,6 +410,13 @@ pipeline {
               --label \"org.opencontainers.image.description=[Zigbee2MQTT](https://www.zigbee2mqtt.io/) - Allows you to use your Zigbee devices without the vendor's bridge or gateway.  \" \
               --no-cache --pull -t ${IMAGE}:amd64-${META_TAG} \
               --build-arg ${BUILD_VERSION_ARG}=${EXT_RELEASE} --build-arg VERSION=\"${VERSION_TAG}\" --build-arg BUILD_DATE=${GITHUB_DATE} ."
+            sh "docker tag ${IMAGE}:amd64-${META_TAG} ghcr.io/imagegenius/igdev-buildcache:amd64-${COMMIT_SHA}-${BUILD_NUMBER}"
+            retry(5) {
+              sh "docker push ghcr.io/imagegenius/igdev-buildcache:amd64-${COMMIT_SHA}-${BUILD_NUMBER}"
+            }
+            sh '''docker rmi \
+                  ghcr.io/imagegenius/igdev-buildcache:amd64-${COMMIT_SHA}-${BUILD_NUMBER} || :
+               '''
           }
         }
         stage('Build ARMHF') {
@@ -415,7 +429,7 @@ pipeline {
             sh '''#! /bin/bash
                   echo $GITHUB_TOKEN | docker login ghcr.io -u ImageGenius-CI --password-stdin
                '''
-            sh "docker buildx build --platform=linux/arm/v7 --output \"type=docker\" \
+            sh "docker build \
               --label \"org.opencontainers.image.created=${GITHUB_DATE}\" \
               --label \"org.opencontainers.image.authors=imagegenius.io\" \
               --label \"org.opencontainers.image.url=https://github.com/imagegenius/docker-zigbee2mqtt/packages\" \
@@ -580,6 +594,51 @@ pipeline {
       }
     }
     /* #######
+       Sync
+       ####### */
+    // Pulls required images to master for pushing, and node for testing
+    stage('Sync-Pull') {
+      when {
+        environment name: 'EXIT_STATUS', value: ''
+      }
+      parallel {
+        stage('Pull on Node') {
+          when {
+            environment name: 'MULTIARCH', value: 'true'
+            }
+          steps {
+            sh '''#! /bin/bash
+                  docker pull ghcr.io/imagegenius/igdev-buildcache:arm32v7-${COMMIT_SHA}-${BUILD_NUMBER}
+                  docker pull ghcr.io/imagegenius/igdev-buildcache:arm64v8-${COMMIT_SHA}-${BUILD_NUMBER}
+                  docker tag ghcr.io/imagegenius/igdev-buildcache:arm32v7-${COMMIT_SHA}-${BUILD_NUMBER} ${IMAGE}:arm32v7-${META_TAG}
+                  docker tag ghcr.io/imagegenius/igdev-buildcache:arm64v8-${COMMIT_SHA}-${BUILD_NUMBER} ${IMAGE}:arm64v8-${META_TAG}
+               '''
+          }
+        }
+        stage('Pull on Master') {
+          agent {
+            label 'MASTER'
+          }
+          steps {
+            echo "Running on node: ${NODE_NAME}"
+            sh '''#! /bin/bash
+                  if [ "${MULTIARCH}" == "true" ]; then
+                    docker pull ghcr.io/imagegenius/igdev-buildcache:amd64-${COMMIT_SHA}-${BUILD_NUMBER}
+                    docker pull ghcr.io/imagegenius/igdev-buildcache:arm32v7-${COMMIT_SHA}-${BUILD_NUMBER}
+                    docker pull ghcr.io/imagegenius/igdev-buildcache:arm64v8-${COMMIT_SHA}-${BUILD_NUMBER}
+                    docker tag ghcr.io/imagegenius/igdev-buildcache:amd64-${COMMIT_SHA}-${BUILD_NUMBER} ${IMAGE}:amd64-${META_TAG}
+                    docker tag ghcr.io/imagegenius/igdev-buildcache:arm32v7-${COMMIT_SHA}-${BUILD_NUMBER} ${IMAGE}:arm32v7-${META_TAG}
+                    docker tag ghcr.io/imagegenius/igdev-buildcache:arm64v8-${COMMIT_SHA}-${BUILD_NUMBER} ${IMAGE}:arm64v8-${META_TAG}
+                  else
+                    docker pull ghcr.io/imagegenius/igdev-buildcache:${COMMIT_SHA}-${BUILD_NUMBER}
+                    docker tag ghcr.io/imagegenius/igdev-buildcache:${COMMIT_SHA}-${BUILD_NUMBER} ${IMAGE}:${META_TAG}
+                  fi
+               '''
+          }
+        }
+      }
+    }
+    /* #######
        Testing
        ####### */
     // Run Container tests
@@ -591,7 +650,7 @@ pipeline {
       steps {
         withCredentials([
           string(credentialsId: 'ci-tests-s3-key-id', variable: 'S3_KEY'),
-          string(credentialsId: 'ci-tests-s3-secret-access-key	', variable: 'S3_SECRET')
+          string(credentialsId: 'ci-tests-s3-secret-access-key', variable: 'S3_SECRET')
         ]) {
           script{
             env.CI_URL = 'https://ci-tests.imagegenius.io/' + env.IMAGE + '/' + env.META_TAG + '/index.html'
@@ -599,12 +658,6 @@ pipeline {
           sh '''#! /bin/bash
                 set -e
                 docker pull ghcr.io/imagegenius/ci:latest
-                if [ "${MULTIARCH}" == "true" ]; then
-                  docker pull ghcr.io/imagegenius/igdev-buildcache:arm32v7-${COMMIT_SHA}-${BUILD_NUMBER}
-                  docker pull ghcr.io/imagegenius/igdev-buildcache:arm64v8-${COMMIT_SHA}-${BUILD_NUMBER}
-                  docker tag ghcr.io/imagegenius/igdev-buildcache:arm32v7-${COMMIT_SHA}-${BUILD_NUMBER} ${IMAGE}:arm32v7-${META_TAG}
-                  docker tag ghcr.io/imagegenius/igdev-buildcache:arm64v8-${COMMIT_SHA}-${BUILD_NUMBER} ${IMAGE}:arm64v8-${META_TAG}
-                fi
                 docker run --rm \
                 --shm-size=1gb \
                 -v /var/run/docker.sock:/var/run/docker.sock \
@@ -635,6 +688,9 @@ pipeline {
         environment name: 'MULTIARCH', value: 'false'
         environment name: 'EXIT_STATUS', value: ''
       }
+      agent {
+       label 'MASTER'
+      }
       steps {
         withCredentials([
           [
@@ -644,6 +700,7 @@ pipeline {
             passwordVariable: 'DOCKERPASS'
           ]
         ]) {
+          echo "Running on node: ${NODE_NAME}"
           retry(5) {
             sh '''#! /bin/bash
                   set -e
@@ -665,17 +722,6 @@ pipeline {
                   done
                '''
           }
-          sh '''#! /bin/bash
-                for DELETEIMAGE in "${GITHUBIMAGE}" "${IMAGE}"; do
-                  docker rmi \
-                  ${DELETEIMAGE}:${META_TAG} \
-                  ${DELETEIMAGE}:${EXT_RELEASE_TAG} \
-                  ${DELETEIMAGE}:latest || :
-                  if [ -n "${SEMVER}" ]; then
-                    docker rmi ${DELETEIMAGE}:${SEMVER} || :
-                  fi
-                done
-             '''
         }
       }
     }
@@ -684,6 +730,9 @@ pipeline {
       when {
         environment name: 'MULTIARCH', value: 'true'
         environment name: 'EXIT_STATUS', value: ''
+      }
+      agent {
+       label 'MASTER'
       }
       steps {
         withCredentials([
@@ -694,17 +743,12 @@ pipeline {
             passwordVariable: 'DOCKERPASS'
           ]
         ]) {
+          echo "Running on node: ${NODE_NAME}"
           retry(5) {
             sh '''#! /bin/bash
                   set -e
                   echo $DOCKERPASS | docker login -u $DOCKERUSER --password-stdin
                   echo $GITHUB_TOKEN | docker login ghcr.io -u ImageGenius-CI --password-stdin
-                  if [ "${CI}" == "false" ]; then
-                    docker pull ghcr.io/imagegenius/igdev-buildcache:arm32v7-${COMMIT_SHA}-${BUILD_NUMBER}
-                    docker pull ghcr.io/imagegenius/igdev-buildcache:arm64v8-${COMMIT_SHA}-${BUILD_NUMBER}
-                    docker tag ghcr.io/imagegenius/igdev-buildcache:arm32v7-${COMMIT_SHA}-${BUILD_NUMBER} ${IMAGE}:arm32v7-${META_TAG}
-                    docker tag ghcr.io/imagegenius/igdev-buildcache:arm64v8-${COMMIT_SHA}-${BUILD_NUMBER} ${IMAGE}:arm64v8-${META_TAG}
-                  fi
                   for MANIFESTIMAGE in "${IMAGE}" "${GITHUBIMAGE}"; do
                     docker tag ${IMAGE}:amd64-${META_TAG} ${MANIFESTIMAGE}:amd64-${META_TAG}
                     docker tag ${IMAGE}:arm32v7-${META_TAG} ${MANIFESTIMAGE}:arm32v7-${META_TAG}
@@ -761,33 +805,94 @@ pipeline {
                   done
                '''
           }
-          sh '''#! /bin/bash
-                for DELETEIMAGE in "${GITHUBIMAGE}" "${IMAGE}"; do
-                  docker rmi \
-                  ${DELETEIMAGE}:amd64-${META_TAG} \
-                  ${DELETEIMAGE}:amd64-latest \
-                  ${DELETEIMAGE}:amd64-${EXT_RELEASE_TAG} \
-                  ${DELETEIMAGE}:arm32v7-${META_TAG} \
-                  ${DELETEIMAGE}:arm32v7-latest \
-                  ${DELETEIMAGE}:arm32v7-${EXT_RELEASE_TAG} \
-                  ${DELETEIMAGE}:arm64v8-${META_TAG} \
-                  ${DELETEIMAGE}:arm64v8-latest \
-                  ${DELETEIMAGE}:arm64v8-${EXT_RELEASE_TAG} || :
-                  if [ -n "${SEMVER}" ]; then
-                    docker rmi \
-                    ${DELETEIMAGE}:amd64-${SEMVER} \
-                    ${DELETEIMAGE}:arm32v7-${SEMVER} \
-                    ${DELETEIMAGE}:arm64v8-${SEMVER} || :
-                  fi
-                done
-                docker rmi \
-                ghcr.io/imagegenius/igdev-buildcache:arm32v7-${COMMIT_SHA}-${BUILD_NUMBER} \
-                ghcr.io/imagegenius/igdev-buildcache:arm64v8-${COMMIT_SHA}-${BUILD_NUMBER} || :
-             '''
         }
       }
     }
-    // If this is a public release tag it in the LS Github
+    /* #######
+       Prune Docker
+       ####### */
+    // Removes all the images created by this run on the master and node
+    stage('Prune-Docker') {
+      when {
+        environment name: 'EXIT_STATUS', value: ''
+      }
+      parallel {
+        stage('Docker Cleanup Node') {
+          steps {
+            echo "Removing all images made by this run"
+            sh '''#! /bin/bash
+                  if [ "${MULTIARCH}" == "true" ]; then
+                    docker rmi \
+                    ghcr.io/imagegenius/igdev-buildcache:arm32v7-${COMMIT_SHA}-${BUILD_NUMBER} \
+                    ghcr.io/imagegenius/igdev-buildcache:arm64v8-${COMMIT_SHA}-${BUILD_NUMBER} \
+                    ${IMAGE}:amd64-${META_TAG} \
+                    ${IMAGE}:arm32v7-${META_TAG} \
+                    ${IMAGE}:arm64v8-${META_TAG} || :
+                  else
+                    docker rmi \
+                      ${IMAGE}:${META_TAG} || :
+                  fi
+               '''
+            echo "Removing dangling images"
+            sh '''#!/bin/bash
+                  dangling_images=$(docker images -f dangling=true -q)
+                  if [ -n "$dangling_images" ]; then
+                    echo "Removing dangling images..."
+                    docker rmi $dangling_images
+                  else
+                    echo "No dangling images found."
+                  fi
+               '''
+          }
+        }
+        stage('Docker Cleanup Master') {
+          agent {
+            label 'MASTER'
+          }
+          steps {
+            echo "Running on node: ${NODE_NAME}"
+            echo "Removing all images made by this run"
+            sh '''#! /bin/bash
+                  if [ "${MULTIARCH}" == "true" ]; then
+                    for DELETEIMAGE in "${GITHUBIMAGE}" "${IMAGE}"; do
+                      docker rmi \
+                      ${DELETEIMAGE}:amd64-${META_TAG} \
+                      ${DELETEIMAGE}:amd64-latest \
+                      ${DELETEIMAGE}:amd64-${EXT_RELEASE_TAG} \
+                      ${DELETEIMAGE}:arm32v7-${META_TAG} \
+                      ${DELETEIMAGE}:arm32v7-latest \
+                      ${DELETEIMAGE}:arm32v7-${EXT_RELEASE_TAG} \
+                      ${DELETEIMAGE}:arm64v8-${META_TAG} \
+                      ${DELETEIMAGE}:arm64v8-latest \
+                      ${DELETEIMAGE}:arm64v8-${EXT_RELEASE_TAG} || :
+                      if [ -n "${SEMVER}" ]; then
+                        docker rmi \
+                        ${DELETEIMAGE}:amd64-${SEMVER} \
+                        ${DELETEIMAGE}:arm32v7-${SEMVER} \
+                        ${DELETEIMAGE}:arm64v8-${SEMVER} || :
+                      fi
+                    done
+                    docker rmi \
+                    ghcr.io/imagegenius/igdev-buildcache:amd64-${COMMIT_SHA}-${BUILD_NUMBER} \
+                    ghcr.io/imagegenius/igdev-buildcache:arm32v7-${COMMIT_SHA}-${BUILD_NUMBER} \
+                    ghcr.io/imagegenius/igdev-buildcache:arm64v8-${COMMIT_SHA}-${BUILD_NUMBER} || :
+                  else
+                    for DELETEIMAGE in "${GITHUBIMAGE}" "${IMAGE}"; do
+                      docker rmi \
+                      ${DELETEIMAGE}:${META_TAG} \
+                      ${DELETEIMAGE}:${EXT_RELEASE_TAG} \
+                      ${DELETEIMAGE}:latest || :
+                      if [ -n "${SEMVER}" ]; then
+                        docker rmi ${DELETEIMAGE}:${SEMVER} || :
+                      fi
+                    done
+                  fi
+               '''
+          }
+        }
+      }
+    }
+    // If this is a public release tag it in the IG Github
     stage('Github-Tag-Push-Release') {
       when {
         branch "main"
@@ -837,6 +942,7 @@ pipeline {
                 TEMPDIR=$(mktemp -d)
                 docker pull ghcr.io/imagegenius/jenkins-builder:latest
                 docker run --rm -e CONTAINER_NAME=${CONTAINER_NAME} -e GITHUB_BRANCH="${BRANCH_NAME}" -v ${TEMPDIR}:/ansible/jenkins ghcr.io/imagegenius/jenkins-builder:latest
+
                 docker pull ghcr.io/linuxserver/readme-sync
                 docker run --rm=true \
                   -e DOCKERHUB_USERNAME=$DOCKERUSER \
