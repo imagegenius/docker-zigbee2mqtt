@@ -2,9 +2,9 @@
 
 # [imagegenius/zigbee2mqtt](https://github.com/imagegenius/docker-zigbee2mqtt)
 
-[![GitHub Release](https://img.shields.io/github/release/imagegenius/docker-zigbee2mqtt.svg?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://github.com/imagegenius/docker-zigbee2mqtt/releases)
-[![GitHub Package Repository](https://img.shields.io/static/v1.svg?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&label=imagegenius.io&message=GitHub%20Package&logo=github)](https://github.com/imagegenius/docker-zigbee2mqtt/packages)
-![Image Size](https://img.shields.io/docker/image-size/imagegenius/zigbee2mqtt.svg?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=docker)
+[![GitHub Release](https://img.shields.io/github/release/imagegenius/docker-zigbee2mqtt.svg?color=007EC6&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://github.com/imagegenius/docker-zigbee2mqtt/releases)
+[![GitHub Package Repository](https://img.shields.io/static/v1.svg?color=007EC6&labelColor=555555&logoColor=ffffff&style=for-the-badge&label=imagegenius.io&message=GitHub%20Package&logo=github)](https://github.com/imagegenius/docker-zigbee2mqtt/packages)
+![Image Size](https://img.shields.io/docker/image-size/imagegenius/zigbee2mqtt/latest.svg?color=007EC6&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=docker)
 [![Jenkins Build](https://img.shields.io/jenkins/build?labelColor=555555&logoColor=ffffff&style=for-the-badge&jobUrl=https%3A%2F%2Fci.imagegenius.io%2Fjob%2FDocker-Pipeline-Builders%2Fjob%2Fdocker-zigbee2mqtt%2Fjob%2Fmain%2F&logo=jenkins)](https://ci.imagegenius.io/job/Docker-Pipeline-Builders/job/docker-zigbee2mqtt/job/main/)
 
 [Zigbee2MQTT](https://www.zigbee2mqtt.io/) - Allows you to use your Zigbee devices without the vendor's bridge or gateway.
@@ -166,4 +166,4 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
-* **1.02.23:** - Initial Release.
+* **02.01.23:** - Initial Release.
