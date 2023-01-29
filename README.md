@@ -46,7 +46,7 @@ services:
       - PGID=1000
       - TZ=Australia/Melbourne
     volumes:
-      - <path to data>:/config
+      - path_to_appdata:/config
     ports:
       - 9442:9442
     devices:
@@ -63,7 +63,7 @@ docker run -d \
   -e PGID=1000 \
   -e TZ=Australia/Melbourne \
   -p 9442:9442 \
-  -v <path to data>:/config \
+  -v path_to_appdata:/config \
   --device /dev/ttyUSB0:Zigbee USB \
   --restart unless-stopped \
   ghcr.io/imagegenius/zigbee2mqtt:latest
