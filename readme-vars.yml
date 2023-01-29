@@ -16,7 +16,7 @@ available_architectures:
 param_container_name: "{{ project_name }}"
 param_usage_include_vols: true
 param_volumes:
-  - { vol_path: "/config", vol_host_path: "<path to data>", desc: "Appdata Path" }
+  - { vol_path: "/config", vol_host_path: "path_to_appdata", desc: "Appdata Path" }
 
 param_usage_include_ports: true
 param_ports:
