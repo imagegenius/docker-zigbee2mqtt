@@ -16,7 +16,6 @@ RUN \
     g++ \
     gcc \
     git \
-    jq \
     linux-headers \
     make \
     npm \
