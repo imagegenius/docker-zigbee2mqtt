@@ -4,8 +4,6 @@
 
 [![GitHub Release](https://img.shields.io/github/release/imagegenius/docker-zigbee2mqtt.svg?color=007EC6&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://github.com/imagegenius/docker-zigbee2mqtt/releases)
 [![GitHub Package Repository](https://shields.io/badge/GitHub%20Package-blue?logo=github&logoColor=ffffff&style=for-the-badge)](https://github.com/imagegenius/docker-zigbee2mqtt/packages)
-[![Docker Hub](https://shields.io/badge/Docker%20Hub-blue?logo=docker&logoColor=ffffff&style=for-the-badge)](https://hub.docker.com/r/imagegenius/zigbee2mqtt)
-![Image Size](https://img.shields.io/docker/image-size/imagegenius/zigbee2mqtt/latest.svg?color=007EC6&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=docker)
 [![Jenkins Build](https://img.shields.io/jenkins/build?labelColor=555555&logoColor=ffffff&style=for-the-badge&jobUrl=https%3A%2F%2Fci.imagegenius.io%2Fjob%2FDocker-Pipeline-Builders%2Fjob%2Fdocker-zigbee2mqtt%2Fjob%2Fmain%2F&logo=jenkins)](https://ci.imagegenius.io/job/Docker-Pipeline-Builders/job/docker-zigbee2mqtt/job/main/)
 
 [Zigbee2MQTT](https://www.zigbee2mqtt.io/) - Allows you to use your Zigbee devices without the vendor's bridge or gateway.
