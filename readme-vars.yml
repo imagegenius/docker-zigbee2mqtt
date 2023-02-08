@@ -4,8 +4,7 @@
 project_name: zigbee2mqtt
 project_url: "https://www.zigbee2mqtt.io/"
 project_logo: "https://www.zigbee2mqtt.io/logo.png"
-project_blurb: |
-  [Zigbee2MQTT]({{ project_url }}) - Allows you to use your Zigbee devices without the vendor's bridge or gateway.
+project_blurb: "Zigbee2MQTT allows you to use your Zigbee devices without the vendor's bridge or gateway."
 project_github_repo_url: "https://github.com/imagegenius/docker-{{ project_name }}"
 
 # supported architectures
