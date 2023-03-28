@@ -3,4 +3,4 @@
 cd /app/zigbee2mqtt || exit 1
 
 exec s6-setuidgid abc \
-	node index.js
+    node index.js
