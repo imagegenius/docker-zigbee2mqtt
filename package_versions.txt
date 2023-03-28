@@ -167,7 +167,7 @@ NAME                                                                           V
 @types/js-yaml                                                                 4.0.5                  npm     
 @types/json-schema                                                             7.0.11                 npm     
 @types/minimatch                                                               3.0.5                  npm     
-@types/node                                                                    18.15.5                npm     
+@types/node                                                                    18.15.10               npm     
 @types/object-assign-deep                                                      0.4.0                  npm     
 @types/prettier                                                                2.7.2                  npm     
 @types/rimraf                                                                  3.0.2                  npm     
@@ -269,7 +269,7 @@ core-util-is                                                                   1
 corepack                                                                       0.16.0                 npm     
 coreutils                                                                      9.1-r0                 apk     
 cross-spawn                                                                    7.0.3                  npm     
-curl                                                                           7.88.1-r0              apk     
+curl                                                                           7.88.1-r1              apk     
 debounce                                                                       1.2.1                  npm     
 debug                                                                          2.6.9                  npm     
 debug                                                                          4.3.4                  npm     
@@ -441,7 +441,7 @@ libattr                                                                        2
 libbsd                                                                         0.11.7-r0              apk     
 libc-utils                                                                     0.7.2-r3               apk     
 libcrypto3                                                                     3.0.8-r1               apk     
-libcurl                                                                        7.88.1-r0              apk     
+libcurl                                                                        7.88.1-r1              apk     
 libgcc                                                                         12.2.1_git20220924-r4  apk     
 libintl                                                                        0.21.1-r1              apk     
 libmd                                                                          1.0.4-r0               apk     
