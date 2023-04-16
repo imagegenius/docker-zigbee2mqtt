@@ -9,7 +9,7 @@ project_github_repo_url: "https://github.com/imagegenius/docker-{{ project_name 
 
 # supported architectures
 available_architectures:
-  - { arch: "{{ arch_x86_64 }}", tag: "amd64-latest"}
+  - { arch: "{{ arch_x86_64 }}", tag: "amd64-latest" }
 
 # container parameters
 param_container_name: "{{ project_name }}"
@@ -20,9 +20,7 @@ param_volumes:
 param_usage_include_ports: true
 param_ports:
   - { external_port: "9442", internal_port: "9442", port_desc: "WebUI Port" }
-param_usage_include_env: true
-param_env_vars:
-  - { env_var: "TZ", env_value: "Australia/Melbourne", desc: "Specify a timezone to use, eg. Australia/Melbourne" }
+param_usage_include_env: false
 
 param_device_map: true
 param_devices:
