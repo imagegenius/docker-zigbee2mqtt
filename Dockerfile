@@ -40,7 +40,7 @@ RUN \
     /tmp/zigbee2mqtt.tar.gz -C \
     /tmp/zigbee2mqtt --strip-components=1 && \
   cd /tmp/zigbee2mqtt && \
-  npm i --save-dev @types/node && \
+  npm ci --save-dev @types/node && \
   npm run build && \
   mv \
     /tmp/zigbee2mqtt/node_modules \
