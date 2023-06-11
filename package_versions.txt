@@ -201,7 +201,7 @@ NAME                                                                           V
 abort-controller                                                               3.0.0                   npm     
 acorn                                                                          8.8.2                   npm     
 acorn-jsx                                                                      5.3.2                   npm     
-ada                                                                            2.4.0-r0                apk     
+ada-libs                                                                       2.5.1-r0                apk     
 agent-base                                                                     7.1.0                   npm     
 ajv                                                                            6.12.6                  npm     
 ajv                                                                            8.12.0                  npm     
@@ -252,9 +252,9 @@ buffer                                                                         5
 buffer                                                                         6.0.3                   npm     
 buffer-crc32                                                                   0.2.13                  npm     
 buffer-from                                                                    1.1.2                   npm     
-busybox                                                                        1.36.0                  binary  
-busybox                                                                        1.36.0-r9               apk     
-busybox-binsh                                                                  1.36.0-r9               apk     
+busybox                                                                        1.36.1                  binary  
+busybox                                                                        1.36.1-r0               apk     
+busybox-binsh                                                                  1.36.1-r0               apk     
 c-ares                                                                         1.19.1-r0               apk     
 ca-certificates                                                                20230506-r0             apk     
 ca-certificates-bundle                                                         20230506-r0             apk     
@@ -286,10 +286,10 @@ convert-source-map                                                             1
 convert-source-map                                                             2.0.0                   npm     
 core-js-compat                                                                 3.30.2                  npm     
 core-util-is                                                                   1.0.3                   npm     
-corepack                                                                       0.17.2                  npm     
+corepack                                                                       0.18.0                  npm     
 coreutils                                                                      9.3-r1                  apk     
 cross-spawn                                                                    7.0.3                   npm     
-curl                                                                           8.1.1-r1                apk     
+curl                                                                           8.1.2-r0                apk     
 debounce                                                                       1.2.1                   npm     
 debug                                                                          2.6.9                   npm     
 debug                                                                          4.3.4                   npm     
@@ -467,7 +467,7 @@ libattr                                                                        2
 libbsd                                                                         0.11.7-r1               apk     
 libc-utils                                                                     0.7.2-r5                apk     
 libcrypto3                                                                     3.1.1-r1                apk     
-libcurl                                                                        8.1.1-r1                apk     
+libcurl                                                                        8.1.2-r0                apk     
 libgcc                                                                         12.2.1_git20220924-r10  apk     
 libidn2                                                                        2.3.4-r1                apk     
 libintl                                                                        0.21.1-r7               apk     
@@ -521,12 +521,12 @@ natural-compare-lite                                                           1
 ncurses-terminfo-base                                                          6.4_p20230506-r0        apk     
 netcat-openbsd                                                                 1.219-r1                apk     
 nghttp2-libs                                                                   1.53.0-r0               apk     
-node                                                                           20.2.0                  binary  
+node                                                                           20.3.0                  binary  
 node-addon-api                                                                 6.1.0                   npm     
 node-gyp-build                                                                 4.6.0                   npm     
 node-int64                                                                     0.4.0                   npm     
 node-releases                                                                  2.0.12                  npm     
-nodejs-current                                                                 20.2.0-r0               apk     
+nodejs-current                                                                 20.3.0-r0               apk     
 normalize-path                                                                 3.0.0                   npm     
 npm-run-path                                                                   4.0.1                   npm     
 number-allocator                                                               1.0.10                  npm     
@@ -619,7 +619,7 @@ source-map-support                                                             0
 source-map-support                                                             0.5.21                  npm     
 split2                                                                         3.2.2                   npm     
 sprintf-js                                                                     1.0.3                   npm     
-ssl_client                                                                     1.36.0-r9               apk     
+ssl_client                                                                     1.36.1-r0               apk     
 stack-trace                                                                    0.0.10                  npm     
 stack-utils                                                                    2.0.5                   npm     
 statuses                                                                       2.0.1                   npm     
