@@ -390,8 +390,8 @@ http-errors                                                                    2
 https-proxy-agent                                                              7.0.0                   npm     
 human-signals                                                                  2.1.0                   npm     
 humanize-duration                                                              3.28.0                  npm     
-icu-data-en                                                                    73.1-r1                 apk     
-icu-libs                                                                       73.1-r1                 apk     
+icu-data-en                                                                    73.2-r0                 apk     
+icu-libs                                                                       73.2-r0                 apk     
 ieee754                                                                        1.2.1                   npm     
 ignore                                                                         5.2.0                   npm     
 immediate                                                                      3.0.6                   npm     
