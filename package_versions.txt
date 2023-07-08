@@ -282,7 +282,7 @@ convert-source-map                                                             1
 convert-source-map                                                             2.0.0                                npm     
 core-js-compat                                                                 3.30.2                               npm     
 core-util-is                                                                   1.0.3                                npm     
-corepack                                                                       0.18.0                               npm     
+corepack                                                                       0.19.0                               npm     
 coreutils                                                                      9.3-r1                               apk     
 cross-spawn                                                                    7.0.3                                npm     
 curl                                                                           8.1.2-r0                             apk     
@@ -515,12 +515,12 @@ natural-compare-lite                                                           1
 ncurses-terminfo-base                                                          6.4_p20230506-r0                     apk     
 netcat-openbsd                                                                 1.219-r1                             apk     
 nghttp2-libs                                                                   1.53.0-r0                            apk     
-node                                                                           20.3.1                               binary  
+node                                                                           20.4.0                               binary  
 node-addon-api                                                                 6.1.0                                npm     
 node-gyp-build                                                                 4.6.0                                npm     
 node-int64                                                                     0.4.0                                npm     
 node-releases                                                                  2.0.12                               npm     
-nodejs-current                                                                 20.3.1-r0                            apk     
+nodejs-current                                                                 20.4.0-r0                            apk     
 normalize-path                                                                 3.0.0                                npm     
 npm-run-path                                                                   4.0.1                                npm     
 number-allocator                                                               1.0.10                               npm     
@@ -684,7 +684,7 @@ yargs                                                                          1
 yargs-parser                                                                   21.1.1                               npm     
 yocto-queue                                                                    0.1.0                                npm     
 zigbee-herdsman                                                                0.16.0                               npm     
-zigbee-herdsman-converters                                                     15.33.1                              npm     
-zigbee2mqtt                                                                    1.32.0                               npm     
+zigbee-herdsman-converters                                                     15.33.1-hotfix.0                     npm     
+zigbee2mqtt                                                                    1.32.1                               npm     
 zigbee2mqtt-frontend                                                           0.6.129                              npm     
 zlib                                                                           1.2.13-r1                            apk     
