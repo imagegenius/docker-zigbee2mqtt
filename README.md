@@ -50,7 +50,7 @@ services:
     ports:
       - 9442:9442
     devices:
-      - /dev/ttyUSB0:Zigbee USB
+      - /dev/ttyUSB0:/dev/ttyUSB0
     restart: unless-stopped
 ```
 
@@ -64,7 +64,7 @@ docker run -d \
   -e TZ=Etc/UTC \
   -p 9442:9442 \
   -v path_to_appdata:/config \
-  --device /dev/ttyUSB0:Zigbee USB \
+  --device /dev/ttyUSB0:/dev/ttyUSB0 \
   --restart unless-stopped \
   ghcr.io/imagegenius/zigbee2mqtt:latest
 
@@ -81,7 +81,7 @@ To configure the container, pass variables at runtime using the format `<externa
 | `-e PGID=1000` | GID for permissions - see below for explanation |
 | `-e TZ=Etc/UTC` | Specify a timezone to use, see this [list](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List). |
 | `-v /config` | Appdata Path |
-| `--device Zigbee USB` | Path the the Zigbee USB, usually /dev/ttyUSB0 or /dev/ttyACM0 |
+| `--device /dev/ttyUSB0` | Path the the Zigbee USB, usually /dev/ttyUSB0 or /dev/ttyACM0 |
 
 ## Umask for running applications
 
