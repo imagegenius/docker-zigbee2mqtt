@@ -24,7 +24,7 @@ param_usage_include_env: false
 
 param_device_map: true
 param_devices:
-  - { device_path: "Zigbee USB", device_host_path: "/dev/ttyUSB0", desc: "Path the the Zigbee USB, usually /dev/ttyUSB0 or /dev/ttyACM0" }
+  - { device_path: "/dev/ttyUSB0", device_host_path: "/dev/ttyUSB0", desc: "Path the the Zigbee USB, usually /dev/ttyUSB0 or /dev/ttyACM0" }
 
 # application setup block
 app_setup_block_enabled: true
