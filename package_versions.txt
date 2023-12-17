@@ -451,7 +451,7 @@ jest-util                                                                      2
 jest-validate                                                                  29.7.0                               npm   
 jest-watcher                                                                   29.7.0                               npm   
 jest-worker                                                                    29.7.0                               npm   
-jq                                                                             1.6-r3                               apk   
+jq                                                                             1.6-r4                               apk   
 js-sdsl                                                                        4.3.0                                npm   
 js-tokens                                                                      4.0.0                                npm   
 js-yaml                                                                        3.14.1                               npm   
