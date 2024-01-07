@@ -665,7 +665,7 @@ type-fest                                                                      0
 type-fest                                                                      0.21.3                               npm   
 typedarray                                                                     0.0.6                                npm   
 typescript                                                                     5.3.3                                npm   
-tzdata                                                                         2023c-r1                             apk   
+tzdata                                                                         2023d-r0                             apk   
 undici-types                                                                   5.26.5                               npm   
 unicode-canonical-property-names-ecmascript                                    2.0.0                                npm   
 unicode-match-property-ecmascript                                              2.0.0                                npm   
