@@ -232,7 +232,7 @@ array-flatten                                                                  2
 array-union                                                                    2.1.0                                npm   
 async                                                                          3.2.5                                npm   
 asynckit                                                                       0.4.0                                npm   
-axios                                                                          1.6.3                                npm   
+axios                                                                          1.6.5                                npm   
 b4a                                                                            1.6.4                                npm   
 babel-jest                                                                     29.7.0                               npm   
 babel-plugin-istanbul                                                          6.1.1                                npm   
@@ -698,7 +698,7 @@ yargs                                                                          1
 yargs-parser                                                                   21.1.1                               npm   
 yocto-queue                                                                    0.1.0                                npm   
 zigbee-herdsman                                                                0.30.0                               npm   
-zigbee-herdsman-converters                                                     18.3.0                               npm   
-zigbee2mqtt                                                                    1.35.0                               npm   
-zigbee2mqtt-frontend                                                           0.6.150                              npm   
+zigbee-herdsman-converters                                                     18.9.0                               npm   
+zigbee2mqtt                                                                    1.35.1                               npm   
+zigbee2mqtt-frontend                                                           0.6.151                              npm   
 zlib                                                                           1.2.13-r1                            apk   
