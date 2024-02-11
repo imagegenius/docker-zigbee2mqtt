@@ -212,7 +212,7 @@ ajv                                                                            8
 alpine-baselayout                                                              3.4.3-r1                             apk   
 alpine-baselayout-data                                                         3.4.3-r1                             apk   
 alpine-keys                                                                    2.4-r1                               apk   
-alpine-release                                                                 3.18.5-r0                            apk   
+alpine-release                                                                 3.18.6-r0                            apk   
 ansi-escapes                                                                   4.3.2                                npm   
 ansi-regex                                                                     5.0.1                                npm   
 ansi-regex                                                                     6.0.1                                npm   
@@ -287,7 +287,7 @@ convert-source-map                                                             2
 core-js-compat                                                                 3.35.1                               npm   
 core-util-is                                                                   1.0.3                                npm   
 corepack                                                                       0.20.0                               npm   
-coreutils                                                                      9.3-r1                               apk   
+coreutils                                                                      9.3-r2                               apk   
 create-jest                                                                    29.7.0                               npm   
 cross-spawn                                                                    7.0.3                                npm   
 curl                                                                           8.5.0-r0                             apk   
@@ -660,7 +660,7 @@ type-fest                                                                      0
 type-fest                                                                      0.21.3                               npm   
 typedarray                                                                     0.0.6                                npm   
 typescript                                                                     5.3.3                                npm   
-tzdata                                                                         2023d-r0                             apk   
+tzdata                                                                         2024a-r0                             apk   
 undici-types                                                                   5.26.5                               npm   
 unicode-canonical-property-names-ecmascript                                    2.0.0                                npm   
 unicode-match-property-ecmascript                                              2.0.0                                npm   
