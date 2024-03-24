@@ -258,8 +258,8 @@ buffer-from                                                                    1
 busybox                                                                        1.36.1-r5                            apk                     
 busybox-binsh                                                                  1.36.1-r5                            apk                     
 c-ares                                                                         1.19.1-r0                            apk                     
-ca-certificates                                                                20230506-r0                          apk                     
-ca-certificates-bundle                                                         20230506-r0                          apk                     
+ca-certificates                                                                20240226-r0                          apk                     
+ca-certificates-bundle                                                         20240226-r0                          apk                     
 callsites                                                                      3.1.0                                npm                     
 camelcase                                                                      5.3.1                                npm                     
 camelcase                                                                      6.3.0                                npm                     
