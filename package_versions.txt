@@ -207,7 +207,7 @@ ajv                                                                            8
 alpine-baselayout                                                              3.4.3-r2                             apk                     
 alpine-baselayout-data                                                         3.4.3-r2                             apk                     
 alpine-keys                                                                    2.4-r1                               apk                     
-alpine-release                                                                 3.19.1-r0                            apk                     
+alpine-release                                                                 3.19.2-r0                            apk                     
 ansi-escapes                                                                   4.3.2                                npm                     
 ansi-regex                                                                     5.0.1                                npm                     
 ansi-regex                                                                     6.0.1                                npm                     
@@ -464,7 +464,7 @@ libacl                                                                         2
 libattr                                                                        2.5.1-r5                             apk                     
 libbsd                                                                         0.11.7-r3                            apk                     
 libc-utils                                                                     0.7.2-r5                             apk                     
-libcrypto3                                                                     3.1.5-r0                             apk                     
+libcrypto3                                                                     3.1.6-r0                             apk                     
 libcurl                                                                        8.5.0-r0                             apk                     
 libgcc                                                                         13.2.1_git20231014-r0                apk                     
 libidn2                                                                        2.3.4-r4                             apk                     
@@ -472,7 +472,7 @@ libintl                                                                        0
 libmd                                                                          1.1.0-r0                             apk                     
 libncursesw                                                                    6.4_p20231125-r0                     apk                     
 libproc2                                                                       4.0.4-r0                             apk                     
-libssl3                                                                        3.1.5-r0                             apk                     
+libssl3                                                                        3.1.6-r0                             apk                     
 libstdc++                                                                      13.2.1_git20231014-r0                apk                     
 libunistring                                                                   1.1-r2                               apk                     
 libuv                                                                          1.47.0-r0                            apk                     
