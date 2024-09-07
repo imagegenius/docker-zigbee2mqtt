@@ -4,7 +4,7 @@ NAME                                                                           V
 @babel/code-frame                                                              7.24.7                               npm                     
 @babel/compat-data                                                             7.25.4                               npm                     
 @babel/core                                                                    7.25.2                               npm                     
-@babel/generator                                                               7.25.5                               npm                     
+@babel/generator                                                               7.25.6                               npm                     
 @babel/helper-annotate-as-pure                                                 7.24.7                               npm                     
 @babel/helper-builder-binary-assignment-operator-visitor                       7.24.7                               npm                     
 @babel/helper-compilation-targets                                              7.25.2                               npm                     
@@ -24,9 +24,9 @@ NAME                                                                           V
 @babel/helper-validator-identifier                                             7.24.7                               npm                     
 @babel/helper-validator-option                                                 7.24.8                               npm                     
 @babel/helper-wrap-function                                                    7.25.0                               npm                     
-@babel/helpers                                                                 7.25.0                               npm                     
+@babel/helpers                                                                 7.25.6                               npm                     
 @babel/highlight                                                               7.24.7                               npm                     
-@babel/parser                                                                  7.25.4                               npm                     
+@babel/parser                                                                  7.25.6                               npm                     
 @babel/plugin-bugfix-firefox-class-in-computed-class-key                       7.25.3                               npm                     
 @babel/plugin-bugfix-safari-class-field-initializer-scope                      7.25.0                               npm                     
 @babel/plugin-bugfix-safari-id-destructuring-collision-in-function-expression  7.25.0                               npm                     
@@ -41,8 +41,8 @@ NAME                                                                           V
 @babel/plugin-syntax-decorators                                                7.24.7                               npm                     
 @babel/plugin-syntax-dynamic-import                                            7.8.3                                npm                     
 @babel/plugin-syntax-export-namespace-from                                     7.8.3                                npm                     
-@babel/plugin-syntax-import-assertions                                         7.24.7                               npm                     
-@babel/plugin-syntax-import-attributes                                         7.24.7                               npm                     
+@babel/plugin-syntax-import-assertions                                         7.25.6                               npm                     
+@babel/plugin-syntax-import-attributes                                         7.25.6                               npm                     
 @babel/plugin-syntax-import-meta                                               7.10.4                               npm                     
 @babel/plugin-syntax-json-strings                                              7.8.3                                npm                     
 @babel/plugin-syntax-jsx                                                       7.24.7                               npm                     
@@ -110,10 +110,10 @@ NAME                                                                           V
 @babel/preset-modules                                                          0.1.6-no-external-plugins            npm                     
 @babel/preset-typescript                                                       7.24.7                               npm                     
 @babel/regjsgen                                                                0.8.0                                npm                     
-@babel/runtime                                                                 7.25.4                               npm                     
+@babel/runtime                                                                 7.25.6                               npm                     
 @babel/template                                                                7.25.0                               npm                     
-@babel/traverse                                                                7.25.4                               npm                     
-@babel/types                                                                   7.25.4                               npm                     
+@babel/traverse                                                                7.25.6                               npm                     
+@babel/types                                                                   7.25.6                               npm                     
 @bcoe/v8-coverage                                                              0.2.3                                npm   (+1 duplicate)    
 @colors/colors                                                                 1.6.0                                npm                     
 @dabh/diagnostics                                                              2.0.3                                npm                     
@@ -175,7 +175,7 @@ NAME                                                                           V
 @types/istanbul-reports                                                        3.0.4                                npm                     
 @types/jest                                                                    29.5.12                              npm                     
 @types/js-yaml                                                                 4.0.9                                npm                     
-@types/node                                                                    22.5.0                               npm                     
+@types/node                                                                    22.5.1                               npm                     
 @types/object-assign-deep                                                      0.4.3                                npm                     
 @types/readable-stream                                                         4.0.15                               npm                     
 @types/stack-utils                                                             2.0.3                                npm                     
@@ -183,14 +183,14 @@ NAME                                                                           V
 @types/ws                                                                      8.5.12                               npm                     
 @types/yargs                                                                   17.0.33                              npm                     
 @types/yargs-parser                                                            21.0.3                               npm                     
-@typescript-eslint/eslint-plugin                                               8.2.0                                npm                     
-@typescript-eslint/parser                                                      8.2.0                                npm                     
-@typescript-eslint/scope-manager                                               8.2.0                                npm                     
-@typescript-eslint/type-utils                                                  8.2.0                                npm                     
-@typescript-eslint/types                                                       8.2.0                                npm                     
-@typescript-eslint/typescript-estree                                           8.2.0                                npm                     
-@typescript-eslint/utils                                                       8.2.0                                npm                     
-@typescript-eslint/visitor-keys                                                8.2.0                                npm                     
+@typescript-eslint/eslint-plugin                                               8.3.0                                npm                     
+@typescript-eslint/parser                                                      8.3.0                                npm                     
+@typescript-eslint/scope-manager                                               8.3.0                                npm                     
+@typescript-eslint/type-utils                                                  8.3.0                                npm                     
+@typescript-eslint/types                                                       8.3.0                                npm                     
+@typescript-eslint/typescript-estree                                           8.3.0                                npm                     
+@typescript-eslint/utils                                                       8.3.0                                npm                     
+@typescript-eslint/visitor-keys                                                8.3.0                                npm                     
 @ungap/structured-clone                                                        1.2.0                                npm                     
 abort-controller                                                               3.0.0                                npm                     
 acorn                                                                          8.12.1                               npm                     
@@ -214,7 +214,6 @@ anymatch                                                                       3
 apk-tools                                                                      2.14.4-r0                            apk                     
 argparse                                                                       1.0.10                               npm                     
 argparse                                                                       2.0.1                                npm                     
-array-union                                                                    2.1.0                                npm                     
 async                                                                          3.2.6                                npm                     
 asynckit                                                                       0.4.0                                npm                     
 axios                                                                          1.7.7                                npm                     
@@ -252,13 +251,13 @@ ca-certificates-bundle                                                         2
 callsites                                                                      3.1.0                                npm                     
 camelcase                                                                      5.3.1                                npm                     
 camelcase                                                                      6.3.0                                npm                     
-caniuse-lite                                                                   1.0.30001651                         npm                     
+caniuse-lite                                                                   1.0.30001655                         npm                     
 catatonit                                                                      0.2.0-r0                             apk                     
 chalk                                                                          2.4.2                                npm                     
 chalk                                                                          4.1.2                                npm   (+21 duplicates)  
 char-regex                                                                     1.0.2                                npm                     
 ci-info                                                                        3.9.0                                npm                     
-cjs-module-lexer                                                               1.3.1                                npm                     
+cjs-module-lexer                                                               1.4.0                                npm                     
 cliui                                                                          8.0.1                                npm                     
 co                                                                             4.6.0                                npm                     
 collect-v8-coverage                                                            1.0.2                                npm                     
@@ -297,7 +296,6 @@ depd                                                                           2
 destroy                                                                        1.2.0                                npm                     
 detect-newline                                                                 3.1.0                                npm                     
 diff-sequences                                                                 29.6.3                               npm                     
-dir-glob                                                                       3.0.1                                npm                     
 dns-packet                                                                     5.6.1                                npm                     
 doctrine                                                                       3.0.0                                npm                     
 eastasianwidth                                                                 0.2.0                                npm                     
@@ -309,15 +307,15 @@ emoji-regex                                                                    9
 enabled                                                                        2.0.0                                npm                     
 encodeurl                                                                      1.0.2                                npm                     
 error-ex                                                                       1.3.2                                npm                     
-escalade                                                                       3.1.2                                npm                     
+escalade                                                                       3.2.0                                npm                     
 escape-html                                                                    1.0.3                                npm                     
 escape-string-regexp                                                           1.0.5                                npm                     
 escape-string-regexp                                                           2.0.0                                npm                     
 escape-string-regexp                                                           4.0.0                                npm                     
 eslint                                                                         8.57.0                               npm                     
 eslint-config-prettier                                                         9.1.0                                npm                     
-eslint-plugin-jest                                                             28.8.0                               npm                     
-eslint-plugin-perfectionist                                                    3.2.0                                npm                     
+eslint-plugin-jest                                                             28.8.1                               npm                     
+eslint-plugin-perfectionist                                                    3.3.0                                npm                     
 eslint-scope                                                                   7.2.2                                npm                     
 eslint-visitor-keys                                                            3.4.3                                npm                     
 espree                                                                         9.6.1                                npm                     
@@ -369,7 +367,6 @@ glob-parent                                                                    5
 glob-parent                                                                    6.0.2                                npm                     
 globals                                                                        11.12.0                              npm                     
 globals                                                                        13.24.0                              npm   (+1 duplicate)    
-globby                                                                         11.1.0                               npm                     
 glossy                                                                         0.1.7                                npm                     
 graceful-fs                                                                    4.2.11                               npm                     
 graphemer                                                                      1.4.0                                npm                     
@@ -460,7 +457,7 @@ levn                                                                           0
 libacl                                                                         2.3.2-r0                             apk                     
 libattr                                                                        2.5.2-r0                             apk                     
 libbsd                                                                         0.12.2-r0                            apk                     
-libcrypto3                                                                     3.3.1-r3                             apk                     
+libcrypto3                                                                     3.3.2-r0                             apk                     
 libcurl                                                                        8.9.0-r0                             apk                     
 libgcc                                                                         13.2.1_git20240309-r0                apk                     
 libidn2                                                                        2.3.7-r0                             apk                     
@@ -469,7 +466,7 @@ libmd                                                                          1
 libncursesw                                                                    6.4_p20240420-r0                     apk                     
 libproc2                                                                       4.0.4-r0                             apk                     
 libpsl                                                                         0.21.5-r1                            apk                     
-libssl3                                                                        3.3.1-r3                             apk                     
+libssl3                                                                        3.3.2-r0                             apk                     
 libstdc++                                                                      13.2.1_git20240309-r0                apk                     
 libunistring                                                                   1.2-r0                               apk                     
 libuv                                                                          1.48.0-r0                            apk                     
@@ -502,7 +499,7 @@ minipass                                                                       7
 mixin-deep                                                                     2.0.1                                npm                     
 mkdir-recursive                                                                0.4.0                                npm                     
 moment                                                                         2.30.1                               npm                     
-mqtt                                                                           5.10.0                               npm                     
+mqtt                                                                           5.10.1                               npm                     
 mqtt-packet                                                                    9.0.0                                npm                     
 ms                                                                             2.0.0                                npm   (+1 duplicate)    
 ms                                                                             2.1.2                                npm                     
@@ -547,7 +544,6 @@ path-is-absolute                                                               1
 path-key                                                                       3.1.1                                npm                     
 path-parse                                                                     1.0.7                                npm                     
 path-scurry                                                                    2.0.0                                npm                     
-path-type                                                                      4.0.0                                npm                     
 picocolors                                                                     1.0.1                                npm                     
 picomatch                                                                      2.3.1                                npm                     
 pirates                                                                        4.0.6                                npm                     
@@ -619,7 +615,7 @@ ssl_client                                                                     1
 stack-trace                                                                    0.0.10                               npm                     
 stack-utils                                                                    2.0.6                                npm                     
 statuses                                                                       2.0.1                                npm                     
-streamx                                                                        2.19.0                               npm                     
+streamx                                                                        2.20.0                               npm                     
 string-length                                                                  4.0.2                                npm                     
 string-width                                                                   4.2.3                                npm   (+1 duplicate)    
 string-width                                                                   5.1.2                                npm                     
@@ -686,9 +682,9 @@ yallist                                                                        3
 yargs                                                                          17.7.2                               npm                     
 yargs-parser                                                                   21.1.1                               npm                     
 yocto-queue                                                                    0.1.0                                npm                     
-zigbee-herdsman                                                                0.57.1                               npm                     
-zigbee-herdsman-converters                                                     20.8.4                               npm                     
-zigbee2mqtt                                                                    1.40.0                               npm                     
+zigbee-herdsman                                                                0.57.3                               npm                     
+zigbee-herdsman-converters                                                     20.12.1                              npm                     
+zigbee2mqtt                                                                    1.40.1                               npm                     
 zigbee2mqtt-frontend                                                           0.7.4                                npm                     
 zlib                                                                           1.3.1-r1                             apk                     
 zstd-libs                                                                      1.5.6-r0                             apk                     
