@@ -202,7 +202,7 @@ ajv                                                                            8
 alpine-baselayout                                                              3.6.5-r0                             apk                     
 alpine-baselayout-data                                                         3.6.5-r0                             apk                     
 alpine-keys                                                                    2.4-r1                               apk                     
-alpine-release                                                                 3.20.2-r0                            apk                     
+alpine-release                                                                 3.20.3-r0                            apk                     
 ansi-escapes                                                                   4.3.2                                npm                     
 ansi-regex                                                                     5.0.1                                npm                     
 ansi-regex                                                                     6.0.1                                npm                     
@@ -463,7 +463,7 @@ libgcc                                                                         1
 libidn2                                                                        2.3.7-r0                             apk                     
 libintl                                                                        0.22.5-r0                            apk                     
 libmd                                                                          1.1.0-r0                             apk                     
-libncursesw                                                                    6.4_p20240420-r0                     apk                     
+libncursesw                                                                    6.4_p20240420-r1                     apk                     
 libproc2                                                                       4.0.4-r0                             apk                     
 libpsl                                                                         0.21.5-r1                            apk                     
 libssl3                                                                        3.3.2-r0                             apk                     
@@ -511,7 +511,7 @@ mylib                                                                          0
 nan                                                                            2.20.0                               npm                     
 natural-compare                                                                1.4.0                                npm                     
 natural-compare-lite                                                           1.4.0                                npm                     
-ncurses-terminfo-base                                                          6.4_p20240420-r0                     apk                     
+ncurses-terminfo-base                                                          6.4_p20240420-r1                     apk                     
 netcat-openbsd                                                                 1.226-r0                             apk                     
 nghttp2-libs                                                                   1.62.1-r0                            apk                     
 node-addon-api                                                                 7.0.0                                npm                     
@@ -650,7 +650,7 @@ type-fest                                                                      0
 type-fest                                                                      0.21.3                               npm                     
 typedarray                                                                     0.0.6                                npm                     
 typescript                                                                     5.5.4                                npm                     
-tzdata                                                                         2024a-r1                             apk                     
+tzdata                                                                         2024b-r0                             apk                     
 undici-types                                                                   6.19.8                               npm                     
 unicode-canonical-property-names-ecmascript                                    2.0.0                                npm                     
 unicode-match-property-ecmascript                                              2.0.0                                npm                     
