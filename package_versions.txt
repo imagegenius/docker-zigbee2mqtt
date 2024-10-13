@@ -237,6 +237,7 @@ balanced-match                                                                 1
 bare-events                                                                    2.5.0                                npm                     
 base64-js                                                                      1.5.1                                npm                     
 bash                                                                           5.2.26-r0                            apk                     
+baz                                                                            UNKNOWN                              npm                     
 bind-decorator                                                                 1.0.11                               npm                     
 bindings                                                                       1.5.0                                npm                     
 bl                                                                             6.0.16                               npm                     
@@ -245,6 +246,7 @@ brace-expansion                                                                1
 brace-expansion                                                                2.0.1                                npm   (+1 duplicate)    
 braces                                                                         3.0.3                                npm                     
 brotli-libs                                                                    1.1.0-r2                             apk                     
+browser_field                                                                  UNKNOWN                              npm                     
 browserslist                                                                   4.24.0                               npm                     
 bser                                                                           2.1.1                                npm                     
 buffer                                                                         6.0.3                                npm                     
@@ -336,6 +338,7 @@ events                                                                         3
 execa                                                                          5.1.1                                npm                     
 exit                                                                           0.1.2                                npm                     
 expect                                                                         29.7.0                               npm                     
+false_main                                                                     UNKNOWN                              npm                     
 fast-deep-equal                                                                3.1.3                                npm                     
 fast-fifo                                                                      1.3.2                                npm                     
 fast-glob                                                                      3.3.2                                npm                     
@@ -396,6 +399,7 @@ import-local                                                                   3
 imurmurhash                                                                    0.1.4                                npm                     
 inflight                                                                       1.0.6                                npm                     
 inherits                                                                       2.0.4                                npm                     
+invalid_main                                                                   UNKNOWN                              npm                     
 is-arrayish                                                                    0.2.1                                npm                     
 is-arrayish                                                                    0.3.2                                npm                     
 is-core-module                                                                 2.15.1                               npm                     
