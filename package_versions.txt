@@ -467,7 +467,7 @@ levn                                                                           0
 libacl                                                                         2.3.2-r0                             apk                     
 libattr                                                                        2.5.2-r0                             apk                     
 libbsd                                                                         0.12.2-r0                            apk                     
-libcrypto3                                                                     3.3.2-r0                             apk                     
+libcrypto3                                                                     3.3.2-r1                             apk                     
 libcurl                                                                        8.9.1-r2                             apk                     
 libgcc                                                                         13.2.1_git20240309-r0                apk                     
 libidn2                                                                        2.3.7-r0                             apk                     
@@ -476,7 +476,7 @@ libmd                                                                          1
 libncursesw                                                                    6.4_p20240420-r1                     apk                     
 libproc2                                                                       4.0.4-r0                             apk                     
 libpsl                                                                         0.21.5-r1                            apk                     
-libssl3                                                                        3.3.2-r0                             apk                     
+libssl3                                                                        3.3.2-r1                             apk                     
 libstdc++                                                                      13.2.1_git20240309-r0                apk                     
 libunistring                                                                   1.2-r0                               apk                     
 libuv                                                                          1.48.0-r0                            apk                     
