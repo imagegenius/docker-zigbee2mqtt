@@ -466,7 +466,7 @@ libgcc                                                                         1
 libidn2                                                                        2.3.7-r0                             apk                    
 libintl                                                                        0.22.5-r0                            apk                    
 libmd                                                                          1.1.0-r0                             apk                    
-libncursesw                                                                    6.4_p20240420-r1                     apk                    
+libncursesw                                                                    6.4_p20240420-r2                     apk                    
 libproc2                                                                       4.0.4-r0                             apk                    
 libpsl                                                                         0.21.5-r1                            apk                    
 libssl3                                                                        3.3.2-r1                             apk                    
@@ -513,7 +513,7 @@ musl-utils                                                                     1
 mylib                                                                          0.0.0                                npm                    
 nan                                                                            2.22.0                               npm                    
 natural-compare                                                                1.4.0                                npm                    
-ncurses-terminfo-base                                                          6.4_p20240420-r1                     apk                    
+ncurses-terminfo-base                                                          6.4_p20240420-r2                     apk                    
 netcat-openbsd                                                                 1.226-r0                             apk                    
 nghttp2-libs                                                                   1.62.1-r0                            apk                    
 node-addon-api                                                                 7.0.0                                npm                    
