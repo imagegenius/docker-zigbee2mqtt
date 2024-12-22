@@ -292,7 +292,7 @@ coreutils-fmt                                                                  9
 coreutils-sha512sum                                                            9.5-r1                               apk                    
 create-jest                                                                    29.7.0                               npm                    
 cross-spawn                                                                    7.0.6                                npm                    
-curl                                                                           8.11.0-r2                            apk                    
+curl                                                                           8.11.1-r0                            apk                    
 debounce                                                                       2.2.0                                npm                    
 debug                                                                          2.6.9                                npm   (+1 duplicate)   
 debug                                                                          4.3.4                                npm   (+1 duplicate)   
@@ -465,7 +465,7 @@ libacl                                                                         2
 libattr                                                                        2.5.2-r0                             apk                    
 libbsd                                                                         0.12.2-r0                            apk                    
 libcrypto3                                                                     3.3.2-r1                             apk                    
-libcurl                                                                        8.11.0-r2                            apk                    
+libcurl                                                                        8.11.1-r0                            apk                    
 libgcc                                                                         13.2.1_git20240309-r0                apk                    
 libidn2                                                                        2.3.7-r0                             apk                    
 libintl                                                                        0.22.5-r0                            apk                    
