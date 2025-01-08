@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM ghcr.io/imagegenius/baseimage-alpine:3.20
+FROM ghcr.io/imagegenius/baseimage-alpine:edge
 
 # set version label
 ARG BUILD_DATE
@@ -19,12 +19,15 @@ RUN \
     gcc \
     git \
     linux-headers \
+    libcap \
     make \
     npm \
     python3 && \
   echo "**** install packages ****" && \
   apk add -U --upgrade --no-cache \
     nodejs && \
+  npm install -g \
+    pnpm && \
   echo "**** install zigbee2mqtt ****" && \
   mkdir -p \
     /app/zigbee2mqtt \
@@ -40,7 +43,7 @@ RUN \
     /tmp/zigbee2mqtt.tar.gz -C \
     /tmp/zigbee2mqtt --strip-components=1 && \
   cd /tmp/zigbee2mqtt && \
-  npm ci --save-dev @types/node && \
+  pnpm install --frozen-lockfile --no-optional && \
   npm run build && \
   mv \
     /tmp/zigbee2mqtt/node_modules \
@@ -49,6 +52,8 @@ RUN \
     /tmp/zigbee2mqtt/dist \
     /tmp/zigbee2mqtt/index.js \
     /app/zigbee2mqtt/ && \
+  echo "**** set capabilities for node ****" && \
+  setcap 'cap_net_bind_service=+ep' /usr/bin/node && \
   echo "**** cleanup ****" && \
   apk del --purge \
     build-dependencies && \
