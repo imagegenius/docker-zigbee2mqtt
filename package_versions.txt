@@ -85,7 +85,7 @@ acl-libs                               2.3.2-r1                            apk
 acorn                                  8.14.0                              npm                         
 acorn-jsx                              5.3.2                               npm                         
 ada-libs                               2.9.2-r2                            apk                         
-agent-base                             7.1.1                               npm                         
+agent-base                             7.1.3                               npm                         
 aggregate-error                        3.1.0                               npm                         
 ajv                                    6.12.6                              npm                         
 ajv                                    8.17.1                              npm                         
@@ -93,8 +93,7 @@ alpine-baselayout                      3.6.8-r1                            apk
 alpine-baselayout-data                 3.6.8-r1                            apk                         
 alpine-keys                            2.5-r0                              apk                         
 ansi-regex                             5.0.1                               npm        (+3 duplicates)  
-ansi-regex                             6.0.1                               npm                         
-ansi-regex                             6.1.0                               npm                         
+ansi-regex                             6.1.0                               npm        (+1 duplicate)   
 ansi-styles                            4.3.0                               npm        (+1 duplicate)   
 ansi-styles                            6.2.1                               npm        (+1 duplicate)   
 apk-tools                              2.14.7-r0                           apk                         
@@ -114,13 +113,13 @@ brotli-libs                            1.1.0-r2                            apk
 buffer                                 6.0.3                               npm                         
 buffer-crc32                           1.0.0                               npm                         
 buffer-from                            1.1.2                               npm                         
-busybox                                1.37.0-r11                          apk                         
-busybox-binsh                          1.37.0-r11                          apk                         
+busybox                                1.37.0-r13                          apk                         
+busybox-binsh                          1.37.0-r13                          apk                         
 c-ares                                 1.34.4-r0                           apk                         
 ca-certificates                        20241121-r1                         apk                         
 ca-certificates-bundle                 20241121-r1                         apk                         
 cac                                    6.7.14                              npm                         
-cacache                                18.0.3                              npm                         
+cacache                                18.0.4                              npm                         
 callsites                              3.1.0                               npm                         
 catatonit                              0.2.0-r0                            apk                         
 chai                                   5.1.2                               npm                         
@@ -143,14 +142,12 @@ coreutils                              9.5-r2                              apk
 coreutils-env                          9.5-r2                              apk                         
 coreutils-fmt                          9.5-r2                              apk                         
 coreutils-sha512sum                    9.5-r2                              apk                         
-cross-spawn                            7.0.5                               npm                         
-cross-spawn                            7.0.6                               npm                         
+cross-spawn                            7.0.6                               npm        (+1 duplicate)   
 curl                                   8.11.1-r0                           apk                         
 debounce                               2.2.0                               npm                         
 debug                                  2.6.9                               npm                         
 debug                                  4.3.4                               npm                         
-debug                                  4.3.5                               npm                         
-debug                                  4.4.0                               npm                         
+debug                                  4.4.0                               npm        (+1 duplicate)   
 deep-eql                               5.0.2                               npm                         
 deep-is                                0.1.4                               npm                         
 depd                                   2.0.0                               npm                         
@@ -203,8 +200,7 @@ findutils                              4.10.0-r0                           apk
 flat-cache                             4.0.1                               npm                         
 flatted                                3.3.2                               npm                         
 fn.name                                1.1.0                               npm                         
-foreground-child                       3.2.1                               npm                         
-foreground-child                       3.3.0                               npm                         
+foreground-child                       3.3.0                               npm        (+1 duplicate)   
 fresh                                  0.5.2                               npm                         
 fs-minipass                            2.1.0                               npm                         
 fs-minipass                            3.0.3                               npm                         
@@ -226,7 +222,7 @@ html-escaper                           2.0.2                               npm
 http-cache-semantics                   4.1.1                               npm                         
 http-errors                            2.0.0                               npm                         
 http-proxy-agent                       7.0.2                               npm                         
-https-proxy-agent                      7.0.5                               npm                         
+https-proxy-agent                      7.0.6                               npm                         
 humanize-duration                      3.32.1                              npm                         
 iconv-lite                             0.6.3                               npm        (+1 duplicate)   
 icu-data-en                            74.2-r0                             apk                         
@@ -253,8 +249,7 @@ istanbul-lib-coverage                  3.2.2                               npm
 istanbul-lib-report                    3.0.1                               npm                         
 istanbul-lib-source-maps               5.0.6                               npm                         
 istanbul-reports                       3.1.7                               npm                         
-jackspeak                              3.4.2                               npm                         
-jackspeak                              3.4.3                               npm                         
+jackspeak                              3.4.3                               npm        (+1 duplicate)   
 jackspeak                              4.0.2                               npm                         
 jq                                     1.7.1-r0                            apk                         
 js-sdsl                                4.3.0                               npm                         
@@ -318,19 +313,19 @@ moment                                 2.30.1                              npm
 mqtt                                   5.10.3                              npm                         
 mqtt-packet                            9.0.1                               npm                         
 ms                                     2.0.0                               npm                         
-ms                                     2.1.2                               npm        (+1 duplicate)   
-ms                                     2.1.3                               npm                         
+ms                                     2.1.2                               npm                         
+ms                                     2.1.3                               npm        (+1 duplicate)   
 multicast-dns                          7.2.5                               npm                         
 musl                                   1.2.5-r9                            apk                         
 musl-utils                             1.2.5-r9                            apk                         
 nanoid                                 3.3.8                               npm                         
 natural-compare                        1.4.0                               npm                         
 ncurses-terminfo-base                  6.5_p20241006-r3                    apk                         
-negotiator                             0.6.3                               npm                         
+negotiator                             0.6.4                               npm                         
 netcat-openbsd                         1.228-r0                            apk                         
 nghttp2-libs                           1.64.0-r0                           apk                         
 node-addon-api                         7.0.0                               npm                         
-node-gyp                               10.2.0                              npm                         
+node-gyp                               10.3.1                              npm                         
 node-gyp-build                         4.6.0                               npm                         
 nodejs                                 22.11.0-r2                          apk                         
 nopt                                   7.2.1                               npm                         
@@ -343,8 +338,7 @@ optionator                             0.9.4                               npm
 p-limit                                3.1.0                               npm                         
 p-locate                               5.0.0                               npm                         
 p-map                                  4.0.0                               npm                         
-package-json-from-dist                 1.0.0                               npm                         
-package-json-from-dist                 1.0.1                               npm                         
+package-json-from-dist                 1.0.1                               npm        (+1 duplicate)   
 pako                                   1.0.11                              npm                         
 parent-module                          1.0.1                               npm                         
 parseurl                               1.3.3                               npm                         
@@ -356,7 +350,7 @@ pathe                                  1.1.2                               npm
 pathval                                2.0.0                               npm                         
 picocolors                             1.1.1                               npm                         
 picomatch                              2.3.1                               npm                         
-pnpm                                   9.15.3                              npm                         
+pnpm                                   9.15.4                              npm                         
 postcss                                8.4.49                              npm                         
 prelude-ls                             1.2.1                               npm                         
 prettier                               3.4.2                               npm                         
@@ -387,8 +381,7 @@ safe-buffer                            5.2.1                               npm
 safe-stable-stringify                  2.5.0                               npm                         
 safer-buffer                           2.1.2                               npm        (+1 duplicate)   
 scanelf                                1.3.8-r1                            apk                         
-semver                                 7.6.2                               npm                         
-semver                                 7.6.3                               npm                         
+semver                                 7.6.3                               npm        (+1 duplicate)   
 send                                   0.19.0                              npm                         
 serve-static                           1.16.2                              npm                         
 setimmediate                           1.0.5                               npm                         
@@ -405,14 +398,14 @@ skalibs-libs                           2.14.3.0-r0                         apk
 slip                                   1.0.2                               npm                         
 smart-buffer                           4.2.0                               npm                         
 socks                                  2.8.3                               npm                         
-socks-proxy-agent                      8.0.4                               npm                         
+socks-proxy-agent                      8.0.5                               npm                         
 source-map                             0.6.1                               npm                         
 source-map-js                          1.2.1                               npm                         
 source-map-support                     0.5.21                              npm                         
 split2                                 4.2.0                               npm                         
 sprintf-js                             1.1.3                               npm                         
-sqlite-libs                            3.47.2-r0                           apk                         
-ssl_client                             1.37.0-r11                          apk                         
+sqlite-libs                            3.48.0-r0                           apk                         
+ssl_client                             1.37.0-r13                          apk                         
 ssri                                   10.0.6                              npm                         
 stack-trace                            0.0.10                              npm                         
 stackback                              0.0.2                               npm                         
