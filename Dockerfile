@@ -27,7 +27,7 @@ RUN \
   apk add -U --upgrade --no-cache \
     nodejs && \
   npm install -g \
-    pnpm && \
+    pnpm@10.4.1 && \
   echo "**** install zigbee2mqtt ****" && \
   mkdir -p \
     /app/zigbee2mqtt \
