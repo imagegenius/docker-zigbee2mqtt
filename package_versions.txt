@@ -134,12 +134,12 @@ commist                                3.2.0                               npm
 concat-map                             0.0.1                               npm                         
 concat-stream                          2.0.0                               npm                         
 core-util-is                           1.0.3                               npm                         
-coreutils                              9.6-r2                              apk                         
-coreutils-env                          9.6-r2                              apk                         
-coreutils-fmt                          9.6-r2                              apk                         
-coreutils-sha512sum                    9.6-r2                              apk                         
+coreutils                              9.7-r1                              apk                         
+coreutils-env                          9.7-r1                              apk                         
+coreutils-fmt                          9.7-r1                              apk                         
+coreutils-sha512sum                    9.7-r1                              apk                         
 cross-spawn                            7.0.6                               npm        (+1 duplicate)   
-curl                                   8.13.0-r0                           apk                         
+curl                                   8.13.0-r1                           apk                         
 debounce                               2.2.0                               npm                         
 debug                                  2.6.9                               npm                         
 debug                                  4.4.0                               npm        (+1 duplicate)   
@@ -261,12 +261,12 @@ libapk2                                2.14.9-r1                           apk
 libattr                                2.5.2-r2                            apk                         
 libbsd                                 0.12.2-r0                           apk                         
 libcrypto3                             3.5.0-r0                            apk                         
-libcurl                                8.13.0-r0                           apk                         
+libcurl                                8.13.0-r1                           apk                         
 libgcc                                 14.2.0-r5                           apk                         
 libidn2                                2.3.7-r0                            apk                         
 libintl                                0.24-r0                             apk                         
 libmd                                  1.1.0-r0                            apk                         
-libncursesw                            6.5_p20250405-r0                    apk                         
+libncursesw                            6.5_p20250412-r0                    apk                         
 libproc2                               4.0.4-r2                            apk                         
 libpsl                                 0.21.5-r3                           apk                         
 libssl3                                3.5.0-r0                            apk                         
@@ -311,7 +311,7 @@ musl                                   1.2.5-r10                           apk
 musl-utils                             1.2.5-r10                           apk                         
 nanoid                                 3.3.11                              npm                         
 natural-compare                        1.4.0                               npm                         
-ncurses-terminfo-base                  6.5_p20250405-r0                    apk                         
+ncurses-terminfo-base                  6.5_p20250412-r0                    apk                         
 negotiator                             1.0.0                               npm                         
 netcat-openbsd                         1.228.1-r0                          apk                         
 nghttp2-libs                           1.65.0-r0                           apk                         
