@@ -101,7 +101,7 @@ coreutils-env                          9.7-r1                              apk
 coreutils-fmt                          9.7-r1                              apk                         
 coreutils-sha512sum                    9.7-r1                              apk                         
 cross-spawn                            7.0.6                               npm        (+1 duplicate)   
-curl                                   8.14.0-r2                           apk                         
+curl                                   8.14.1-r1                           apk                         
 debounce                               2.2.0                               npm                         
 debug                                  4.4.0                               npm        (+1 duplicate)   
 debug                                  4.4.1                               npm                         
@@ -175,7 +175,7 @@ istanbul-lib-source-maps               5.0.6                               npm
 istanbul-reports                       3.1.7                               npm                         
 jackspeak                              3.4.3                               npm        (+1 duplicate)   
 jackspeak                              4.1.0                               npm                         
-jq                                     1.7.1-r0                            apk                         
+jq                                     1.8.0-r0                            apk                         
 js-sdsl                                4.3.0                               npm                         
 js-yaml                                4.1.0                               npm                         
 jsbn                                   1.1.0                               npm        (+1 duplicate)   
@@ -187,8 +187,8 @@ libapk2                                2.14.9-r2                           apk
 libattr                                2.5.2-r2                            apk                         
 libbsd                                 0.12.2-r0                           apk                         
 libcrypto3                             3.5.0-r0                            apk                         
-libcurl                                8.14.0-r2                           apk                         
-libgcc                                 14.3.0-r2                           apk                         
+libcurl                                8.14.1-r1                           apk                         
+libgcc                                 14.3.0-r3                           apk                         
 libidn2                                2.3.7-r0                            apk                         
 libintl                                0.24.1-r0                           apk                         
 libmd                                  1.1.0-r0                            apk                         
@@ -196,7 +196,7 @@ libncursesw                            6.5_p20250503-r0                    apk
 libproc2                               4.0.4-r3                            apk                         
 libpsl                                 0.21.5-r3                           apk                         
 libssl3                                3.5.0-r0                            apk                         
-libstdc++                              14.3.0-r2                           apk                         
+libstdc++                              14.3.0-r3                           apk                         
 libunistring                           1.3-r0                              apk                         
 lie                                    3.3.0                               npm                         
 linux-pam                              1.7.0-r4                            apk                         
@@ -228,7 +228,7 @@ mqtt                                   5.13.0                              npm
 mqtt-packet                            9.0.2                               npm                         
 ms                                     2.1.3                               npm        (+1 duplicate)   
 multicast-dns                          7.2.5                               npm                         
-musl                                   1.2.5-r10                           apk                         
+musl                                   1.2.5-r12                           apk                         
 musl-utils                             1.2.5-r10                           apk                         
 nanoid                                 3.3.11                              npm                         
 ncurses-terminfo-base                  6.5_p20250503-r0                    apk                         
@@ -366,4 +366,4 @@ zigbee2mqtt                            2.4.0                               npm
 zigbee2mqtt-frontend                   0.9.13                              npm                         
 zigbee2mqtt-windfront                  1.0.2                               npm                         
 zlib                                   1.3.1-r2                            apk                         
-zstd-libs                              1.5.7-r0                            apk                         
+zstd-libs                              1.5.7-r1                            apk                         
