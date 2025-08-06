@@ -1,11 +1,14 @@
 ---
-
 # project information
 project_name: zigbee2mqtt
 project_url: "https://www.zigbee2mqtt.io/"
 project_logo: "https://www.zigbee2mqtt.io/logo.png"
 project_blurb: "Zigbee2MQTT allows you to use your Zigbee devices without the vendor's bridge or gateway."
 project_github_repo_url: "https://github.com/imagegenius/docker-{{ project_name }}"
+
+project_deprecation_status: true
+project_deprecation_message: |
+  No longer use this image, use `ghcr.io/koenkk/zigbee2mqtt` (should pretty much be inplace update, just set `ZIGBEE2MQTT_DATA=/config`)
 
 # supported architectures
 available_architectures:
@@ -30,7 +33,6 @@ param_devices:
 app_setup_block_enabled: true
 app_setup_block: |
   The default configuration should be enough to get started but you may need to change the USB device in /config/configuration.yaml
-
 
 # changelog
 changelogs:
